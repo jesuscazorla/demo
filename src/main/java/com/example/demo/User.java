@@ -19,6 +19,10 @@ public class User {
     @NotBlank(message = "Name is mandatory") 
     private String name;
 
+    @NotBlank(message = "LastName is mandatory") 
+    private String lastname;
+
+
     @NotBlank(message = "Email is mandatory")
     @Email
     private String email;
@@ -26,9 +30,10 @@ public class User {
     public User() {
     }
 
-    public User(String name, String email) {
+    public User(String name, String email, String lastname) {
         this.name = name;
         this.email = email;
+        this.lastname = lastname;
     }
 
     public long getId() {
@@ -53,6 +58,15 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     @Override
